@@ -1,0 +1,14 @@
+C:\Users\optimal\documents\visual studio 2010\Projects\Stupeflix\TestApplication\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\optimal\documents\visual studio 2010\Projects\Stupeflix\TestApplication\bin\Debug\TestApplication.exe
+C:\Users\optimal\documents\visual studio 2010\Projects\Stupeflix\TestApplication\bin\Debug\TestApplication.pdb
+C:\Users\optimal\documents\visual studio 2010\Projects\Stupeflix\TestApplication\bin\Debug\Stupeflix.dll
+C:\Users\optimal\documents\visual studio 2010\Projects\Stupeflix\TestApplication\bin\Debug\Stupeflix.pdb
+C:\Users\optimal\documents\visual studio 2010\Projects\Stupeflix\TestApplication\obj\x86\Debug\TestApplication.exe
+C:\Users\optimal\documents\visual studio 2010\Projects\Stupeflix\TestApplication\obj\x86\Debug\TestApplication.pdb
+C:\Users\optimal\Documents\visual studio 2010\Projects\Stupeflix - Copy\TestApplication\obj\x86\Debug\TestApplication.exe
+C:\Users\optimal\Documents\visual studio 2010\Projects\Stupeflix - Copy\TestApplication\obj\x86\Debug\TestApplication.pdb
+C:\Users\optimal\Documents\visual studio 2010\Projects\Stupeflix - Copy\TestApplication\bin\Debug\TestApplication.exe
+C:\Users\optimal\Documents\visual studio 2010\Projects\Stupeflix - Copy\TestApplication\bin\Debug\TestApplication.pdb
+C:\Users\optimal\Documents\visual studio 2010\Projects\Stupeflix - Copy\TestApplication\bin\Debug\Stupeflix.dll
+C:\Users\optimal\Documents\visual studio 2010\Projects\Stupeflix - Copy\TestApplication\bin\Debug\Stupeflix.pdb
+C:\Users\optimal\Documents\visual studio 2010\Projects\Stupeflix - Copy\TestApplication\obj\x86\Debug\ResolveAssemblyReference.cache

@@ -1,0 +1,348 @@
+<movie service="craftsman-1.0">
+  <body>
+    <!-- Top level stack: contains the soundtrack and the video itself-->
+    <stack>
+      <!-- Add a movie wide soundtrack: duration of the soundtrack is dependant on the up node (stack) using duration =".." -->
+      <!-- Silence, L'autre endroit: http://www.jamendo.com/fr/album/830 -->
+      <audio filename="http://assets.stupeflix.com/code/ebusinessvideo/soundtracks/Realite.mp3" volume="0.5" fadeout="4.0" duration=".."/>
+      <!-- Top level sequence -->
+      <sequence>
+        <!-- First part: sequence of two background images with a single text overlay -->
+        <stack duration="6.0">
+          <!-- Sequence of images -->
+          <sequence>
+            <!-- Classical kenburns effect -->
+            <effect type="kenburns" duration="3.5">
+              <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/file_11.jpg">
+                <!-- Small trick: Add a small white frame with no transparency to the image to reduce it at rendering time => no edit of the image is needed -->
+                <filter type="frame" width="0.1" color="#FFFFFFFF"/>
+              </image>
+            </effect>
+            <!-- Transition between the two background images -->
+            <transition type="move" duration="1.0"/>
+            <!-- Same effect for the second background image -->
+            <effect type="kenburns" duration="3.5">
+              <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/file_10.jpg">
+                <filter type="frame" width="0.1" color="#FFFFFFFF"/>
+              </image>
+            </effect>
+          </sequence>
+          <!-- Text overlay with shadow: shadow is currently created duplicating the text in black with some blur added-->
+          <!-- NB: newlines are currently ignored at the start and end of text, so this xml is indented to ease the explanations, but you should not add extra newlines in
+ your own xml. -->
+
+          <!-- Text like placement using left, bottom and height. Apply black font color as this is the shadow. -->
+          <text type="zone" left="0.09" bottom="0.13" height="0.18" fontcolor="#000000">
+            EOS 50D:
+            <!-- Animator: grow will slowly increase text size (implemented by moving the text near the camera in 3D)-->
+            <animator type="grow" />
+            <!-- Make the text appear in 1 second, sliding from the left -->
+            <animator type="slide-in" direction="left" duration="1.0"/>
+            <!-- Make the text disappear in 1 second, sliding from the left -->
+            <animator type="slide-out" direction="left" duration="1.0"/>
+            <!-- Make the text slowly move to improve attractiveness -->
+            <animator type="slide" direction="left" duration="6.0"/>
+            <!-- Text will appear in 1.5s from totally transparent, to totally opaque (in addition to the slide-in effect) -->
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.5"/>
+            <!-- Text will disappear in 1.5s from totally opaque, to totally transparent (in addition to the slide-out effect) -->
+            <!-- Note the margin-end that will fix the effect to the end of text effect. (just like a CSS property, but for time) -->
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.5"/>
+            <!-- Add a blur effect to soften shadow edges -->
+            <filter type="blur" diameter="2.0"/>
+          </text>          
+          <!-- Text itself: same xml, with slight variations on position and color-->
+          <!-- Text color is almost white -->
+          <text type="zone" left="0.1" bottom="0.12" height="0.18" fontcolor="#DDDDDD">
+            EOS 50D:
+            <animator type="grow" duration="6.0"/>
+            <animator type="slide-in" direction="left" duration="1.0"/>
+            <animator type="slide-out" direction="left" duration="1.0"/>
+            <animator type="slide" direction="left" duration="6.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.5"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.5"/>
+          </text>
+          <!-- Same tricks for the rest of text -->
+          <text type="zone" left="0.09" bottom="0.01" height="0.18" fontcolor="#000000">
+            Explore photography
+            <animator type="grow" duration="6.0"/>
+            <animator type="slide-in" direction="right" duration="1.0"/>
+            <animator type="slide-out" direction="right" duration="1.0"/>
+            <animator type="slide" direction="right" duration="6.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.5"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.5"/>
+            <filter type="blur" diameter="2.0"/>
+          </text>
+          <text type="zone" left="0.1" bottom="0.0" height="0.18" fontcolor="#DDDDDD">
+            Explore photography
+            <animator type="grow" duration="6.0"/>
+            <animator type="slide-in" direction="right" duration="1.0"/>
+            <animator type="slide-out" direction="right" duration="1.0"/>
+            <animator type="slide" direction="right" duration="6.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.5"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.5"/>
+          </text>
+        </stack>
+        <!-- Transition -->
+        <transition type="cube" duration="1.0"/>
+        <!-- Second camera image set: basically same set of effects-->
+        <stack duration="6.0">
+          <sequence>
+            <effect type="kenburns" duration="3.5">
+              <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/file_13.jpg">
+                <filter type="frame" width="0.1" color="#FFFFFFFF"/>
+              </image>
+            </effect>
+            <transition type="under" duration="1.0"/>
+            <effect type="kenburns" duration="3.5">
+              <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/file_07.jpg">
+                <filter type="frame" width="0.1" color="#FFFFFFFF"/>
+              </image>
+            </effect>
+          </sequence>
+          <text type="zone" left="0.09" bottom="0.13" height="0.18" fontcolor="#000000">
+            15.1 Megapixels,
+            <animator type="grow" duration="6.0"/>
+            <animator type="slide-in" direction="left" duration="1.0"/>
+            <animator type="slide-out" direction="left" duration="1.0"/>
+            <animator type="slide" direction="left" duration="6.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.5"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.5"/>
+            <filter type="blur" diameter="2.0"/>
+          </text>
+          <text type="zone" left="0.1" bottom="0.12" height="0.18" fontcolor="#DDDDDD">
+            15.1 Megapixels,
+            <animator type="grow" duration="6.0"/>
+            <animator type="slide-in" direction="left" duration="1.0"/>
+            <animator type="slide-out" direction="left" duration="1.0"/>
+            <animator type="slide" direction="left" duration="6.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.5"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.5"/>
+          </text>
+          <text type="zone" left="0.09" bottom="0.01" height="0.18" fontcolor="#000000">
+            Bright 3" LCD
+            <animator type="grow" duration="6.0"/>
+            <animator type="slide-in" direction="right" duration="1.0"/>
+            <animator type="slide-out" direction="right" duration="1.0"/>
+            <animator type="slide" direction="right" duration="6.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.5"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.5"/>
+            <filter type="blur" diameter="2.0"/>
+          </text>
+          <text type="zone" left="0.1" bottom="0.0" height="0.18" fontcolor="#DDDDDD">
+            Bright 3" LCD
+            <animator type="grow" duration="6.0"/>
+            <animator type="slide-in" direction="right" duration="1.0"/>
+            <animator type="slide-out" direction="right" duration="1.0"/>
+            <animator type="slide" direction="right" duration="6.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.5"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.5"/>
+          </text>
+        </stack>
+        <transition type="move" duration="1.0"/>
+        <!-- Third Image Set : single image with a set of logo added to the right -->
+        <stack duration="6.0">
+          <stack duration="6.0">
+            <sequence>
+              <effect type="kenburns" duration="6.0">
+                <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/file_12.jpg">
+                  <filter type="frame" width="0.1" color="#FFFFFFFF"/>
+                </image>
+              </effect>
+            </sequence>
+          </stack>
+          <!-- Sets of small feature logo on the right: number of megapixels, lcd size, digic logo etc ...-->
+          <!-- overlay position is CSS like properties, just like for text: top and right margin + height, in fraction of height / width -->
+          <overlay top="0.05" right="0.02" height="0.16">
+            <!-- Base Image -->
+            <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/megapixels.gif"/>
+            <!-- Apparition animation : slide-in, and time margin -->
+            <animator duration="1.0" type="slide-in" margin-start="0.0"/>
+            <!-- Disparition animation : slide-out, time margin, and direction -->
+            <animator duration="1.0" type="slide-out" margin-end="0.8" direction="right" />
+          </overlay>
+          <overlay top="0.23" right="0.02" height="0.16">
+            <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/lcd_size.gif"/>
+            <!-- margin-start is increased from an image to the next one, to shift apparition of logos -->
+            <animator duration="1.0" type="slide-in" margin-start="0.5"/>
+            <!-- margin-end is dereased from an image to the next one, to shift disparition of logos -->
+            <animator duration="1.0" type="slide-out" margin-end="0.6" direction="right"/>
+          </overlay>
+          <!-- So on ... -->
+          <overlay top="0.41" right="0.02" height="0.16">
+            <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/digic4.gif"/>
+            <animator duration="1.0" type="slide-in" margin-start="1.0"/>
+            <animator duration="1.0" type="slide-out" margin-end="0.4" direction="right"/>
+          </overlay>
+          <overlay top="0.59" right="0.02" height="0.16">
+            <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/liveview.gif"/>
+            <animator duration="1.0" type="slide-in" margin-start="1.5"/>
+            <animator duration="1.0" type="slide-out" margin-end="0.2" direction="right" />
+          </overlay>
+          <overlay top="0.77" right="0.02" height="0.16">
+            <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/pictbridge.gif"/>
+            <animator duration="1.0" type="slide-in" margin-start="2.0"/>
+            <animator duration="1.0" type="slide-out" margin-end="0.0" direction="right"/>
+          </overlay>
+        </stack>
+        <transition type="crossfade" duration="0.3"/>
+        <!-- Fourth part: slideshow of photos take with the camera -->
+        <stack duration="12.0">
+          <!-- Multi image effect : several images on the same scene, with rotation between each couple.-->
+          <effect type="rotator" duration="12.0">
+            <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/2008-10-14_14-09-18.jpg">
+              <filter type="borderBlur" transWidth="0.05" width="0.0"/>
+            </image>
+            <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/2008-10-10_17-08-27.jpg">
+              <filter type="borderBlur" transWidth="0.05" width="0.0"/>
+            </image>
+            <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/2008-10-10_15-55-14.jpg">
+              <filter type="borderBlur" transWidth="0.05" width="0.0"/>
+            </image>
+            <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/2008-10-10_14-03-50.jpg">
+              <filter type="borderBlur" transWidth="0.05" width="0.0"/>
+            </image>
+          </effect>
+          <!-- Same shadow / text effects as previously -->
+          <text type="zone" left="0.09" bottom="0.11" height="0.13" fontcolor="#000000">
+            Improved noise reduction:
+            <animator type="grow" duration="12.0"/>
+            <animator type="slide-in" direction="left" duration="2.0"/>
+            <animator type="slide-out" direction="left" duration="2.0"/>
+            <animator type="slide" direction="left" duration="12.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="3.0"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="3.0"/>
+            <filter type="blur" diameter="2.0"/>
+          </text>
+          <text type="zone" left="0.1" bottom="0.1" height="0.13" fontcolor="#FFFFFF">
+            Improved noise reduction:
+            <animator type="grow" duration="12.0"/>
+            <animator type="slide-in" direction="left" duration="2.0"/>
+            <animator type="slide-out" direction="left" duration="2.0"/>
+            <animator type="slide" direction="left" duration="12.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="3.0"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="3.0"/>
+          </text>
+          <text type="zone" left="0.09" bottom="0.03" height="0.13" fontcolor="#000000">
+            exceptional image quality
+            <animator type="grow" duration="12.0"/>
+            <animator type="slide-in" direction="right" duration="2.0"/>
+            <animator type="slide-out" direction="right" duration="2.0"/>
+            <animator type="slide" direction="right" duration="12.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="3.0"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="3.0"/>
+            <filter type="blur" diameter="2.0"/>
+          </text>
+          <text type="zone" left="0.1" bottom="0.02" height="0.13" fontcolor="#FFFFFF">
+            exceptional image quality
+            <animator type="grow" duration="12.0"/>
+            <animator type="slide-in" direction="right" duration="2.0"/>
+            <animator type="slide-out" direction="right" duration="2.0"/>
+            <animator type="slide" direction="right" duration="12.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="3.0"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="3.0"/>
+          </text>
+        </stack>
+        <transition type="crossfade" duration="1.0"/>
+        <!-- Fifth part : first journalist comment -->
+        <stack duration="4.0">
+          <text type="zone" left="0.09" bottom="0.53" height="0.18" fontcolor="#000000">
+            "High-speed and perfect quality"
+            <animator type="grow" duration="4.0"/>
+            <animator type="slide-in" direction="left" duration="0.666666666667"/>
+            <animator type="slide-out" direction="left" duration="0.666666666667"/>
+            <animator type="slide" direction="left" duration="4.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.0"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.0"/>
+            <filter type="blur" diameter="2.0"/>
+          </text>
+          <text type="zone" left="0.1" bottom="0.52" height="0.18" fontcolor="#DDDDDD">
+            "High-speed and perfect quality"
+            <animator type="grow" duration="4.0"/>
+            <animator type="slide-in" direction="left" duration="0.666666666667"/>
+            <animator type="slide-out" direction="left" duration="0.666666666667"/>
+            <animator type="slide" direction="left" duration="4.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.0"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.0"/>
+          </text>
+          <text type="zone" left="0.09" bottom="0.41" height="0.18" fontcolor="#000000">
+            The Photographer
+            <animator type="grow" duration="4.0"/>
+            <animator type="slide-in" direction="right" duration="0.666666666667"/>
+            <animator type="slide-out" direction="right" duration="0.666666666667"/>
+            <animator type="slide" direction="right" duration="4.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.0"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.0"/>
+            <filter type="blur" diameter="2.0"/>
+          </text>
+          <text type="zone" left="0.1" bottom="0.4" height="0.18" fontcolor="#DDDDDD">
+            The Photographer
+            <animator type="grow" duration="4.0"/>
+            <animator type="slide-in" direction="right" duration="0.666666666667"/>
+            <animator type="slide-out" direction="right" duration="0.666666666667"/>
+            <animator type="slide" direction="right" duration="4.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.0"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.0"/>
+          </text>
+        </stack>
+        <transition type="crossfade" duration="1.0"/>
+        <!-- Sixth part : second journalist comment -->
+        <stack duration="4.0">
+          <text type="zone" left="0.09" bottom="0.33" height="0.18" fontcolor="#000000">
+            "Feature-packed and affordable."
+            <animator type="grow" duration="4.0"/>
+            <animator type="slide-in" direction="left" duration="0.666666666667"/>
+            <animator type="slide-out" direction="left" duration="0.666666666667"/>
+            <animator type="slide" direction="left" duration="4.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.0"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.0"/>
+            <filter type="blur" diameter="2.0"/>
+          </text>
+          <text type="zone" left="0.1" bottom="0.32" height="0.18" fontcolor="#DDDDDD">
+            "Feature-packed and affordable."
+            <animator type="grow" duration="4.0"/>
+            <animator type="slide-in" direction="left" duration="0.666666666667"/>
+            <animator type="slide-out" direction="left" duration="0.666666666667"/>
+            <animator type="slide" direction="left" duration="4.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.0"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.0"/>
+          </text>
+          <text type="zone" left="0.09" bottom="0.21" height="0.18" fontcolor="#000000">
+            Camera online
+            <animator type="grow" duration="4.0"/>
+            <animator type="slide-in" direction="right" duration="0.666666666667"/>
+            <animator type="slide-out" direction="right" duration="0.666666666667"/>
+            <animator type="slide" direction="right" duration="4.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.0"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.0"/>
+            <filter type="blur" diameter="2.0"/>
+          </text>
+          <text type="zone" left="0.1" bottom="0.2" height="0.18" fontcolor="#DDDDDD">
+            Camera online
+            <animator type="grow" duration="4.0"/>
+            <animator type="slide-in" direction="right" duration="0.666666666667"/>
+            <animator type="slide-out" direction="right" duration="0.666666666667"/>
+            <animator type="slide" direction="right" duration="4.0"/>
+            <filter type="alpha" alphaStart="0.0" alphaEnd="1.0" duration="1.0"/>
+            <filter type="alpha" margin-end="0.0" alphaStart="1.0" alphaEnd="0.0" duration="1.0"/>
+          </text>
+        </stack>
+        <transition type="crossfade" duration="0.5"/>
+        <!-- Finally the Stupeflix end animation -->        
+        <effect duration="1.6" type="none">
+          <!-- A single blank image -->
+          <image color="#FFFFFF"/>
+        </effect>
+        <transition type="move" duration="1" direction="up"/>
+        <!-- First logo, without subtitle-->
+        <effect duration="2.5" type="none">
+          <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/logo1.jpg"/>
+        </effect>
+        <transition type="circle" duration="1"/>
+        <!-- Identical logo, with subtitile => transition will make it appear -->
+        <effect duration="3" type="none">
+          <image filename="http://assets.stupeflix.com/code/ebusinessvideo/images/logo2.jpg"/>
+        </effect>
+      </sequence>
+    </stack>
+  </body>
+</movie>

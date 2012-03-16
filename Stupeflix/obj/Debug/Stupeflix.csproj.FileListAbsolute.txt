@@ -1,0 +1,10 @@
+C:\Users\optimal\documents\visual studio 2010\Projects\Stupeflix\Stupeflix\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\optimal\documents\visual studio 2010\Projects\Stupeflix\Stupeflix\bin\Debug\Stupeflix.dll
+C:\Users\optimal\documents\visual studio 2010\Projects\Stupeflix\Stupeflix\bin\Debug\Stupeflix.pdb
+C:\Users\optimal\documents\visual studio 2010\Projects\Stupeflix\Stupeflix\obj\Debug\Stupeflix.dll
+C:\Users\optimal\documents\visual studio 2010\Projects\Stupeflix\Stupeflix\obj\Debug\Stupeflix.pdb
+C:\Users\optimal\Documents\visual studio 2010\Projects\Stupeflix - Copy\Stupeflix\bin\Debug\Stupeflix.dll
+C:\Users\optimal\Documents\visual studio 2010\Projects\Stupeflix - Copy\Stupeflix\bin\Debug\Stupeflix.pdb
+C:\Users\optimal\Documents\visual studio 2010\Projects\Stupeflix - Copy\Stupeflix\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\optimal\Documents\visual studio 2010\Projects\Stupeflix - Copy\Stupeflix\obj\Debug\Stupeflix.dll
+C:\Users\optimal\Documents\visual studio 2010\Projects\Stupeflix - Copy\Stupeflix\obj\Debug\Stupeflix.pdb
