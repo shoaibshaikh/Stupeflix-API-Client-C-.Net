@@ -9,8 +9,7 @@ The examples will use the movie.xml example file in the current directory.
 The movie.xml file is commented, and will give you both simple and advanced tricks to use 
 the movie description xml language.
 
-To run this code, you will need to change the access key and private key 
-in the "keys.XXX" file  (keys.php, keys.py, key.rb ...) .
+To run this code, you will need to change the access key and private key in TestApplication Code
 To get your accessKey / secret Key pair, 
 go to http://accounts.stupeflix.com/ .
 
