@@ -2,7 +2,7 @@
 Stupeflix web services client libraries & examples.
 http://www.stupeflix.com
 
-This project is just a java conversion of stupeflix API client in c# .net.
+This project is just a C3 .net conversion of stupeflix API client JAVA.
 There is a class library for stupeflix and a TestApplication that contains the sample code.
 
 The examples will use the movie.xml example file in the current directory.
