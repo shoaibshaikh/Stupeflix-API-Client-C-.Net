@@ -220,10 +220,12 @@ namespace Stupeflix
 
         public static Dictionary<string, string> md5file(String filename)
         {
-            StreamReader sr = new StreamReader(filename);
+            using(StreamReader sr = new StreamReader(filename))
+			{
             MD5CryptoServiceProvider md5h = new MD5CryptoServiceProvider();
             var md5 = md5h.ComputeHash(sr.BaseStream);
             return StupeflixBase.md5triplet(md5);
+			}
         }
 
         // Compute the (md5, md5 hexadecimal, md5 base 64) triplet for of a file
